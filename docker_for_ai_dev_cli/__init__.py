@@ -2,8 +2,10 @@ import argparse
 import requests
 import json
 import os
-parser = argparse.ArgumentParser()
-parser.add_argument("COMMAND", help="[list-images|create]")
+parser = argparse.ArgumentParser(add_help=False,usage='%(prog)s COMMAND')
+parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS,
+                    help='show help message')
+parser.add_argument("COMMAND", help="[list|create]")
 
 def get_image_infos():
     r = requests.get('https://registry.hub.docker.com/v2/repositories/p208p2002/docker-for-ai-dev/tags')
@@ -103,10 +105,10 @@ def create_container():
 
 def main():
     args = parser.parse_args()
-    if(args.COMMAND == 'list-image-tags'):
+    if(args.COMMAND == 'list'):
         image_tags = list_image_tags()
         for tag in image_tags:
             print(tag)
 
-    elif(args.COMMAND == 'create-container'):
+    elif(args.COMMAND == 'create'):
         create_container()
