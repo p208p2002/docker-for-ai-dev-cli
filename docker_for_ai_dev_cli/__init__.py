@@ -103,6 +103,13 @@ def create_container():
     print(docker_run_cmd)
     os.system(docker_run_cmd)
 
+def update_images():
+    image_tags = list_image_tags()
+    for i,image_tag in enumerate(image_tags):
+        print("[%d] %s"%(i+1,image_tag))
+    update_image_id =  int(input('which image to update?'))-1
+    os.system('docker pull %s'%image_tags[update_image_id])
+
 def main():
     args = parser.parse_args()
     if(args.COMMAND == 'list'):
@@ -112,3 +119,6 @@ def main():
 
     elif(args.COMMAND == 'create'):
         create_container()
+
+    elif(args.COMMAND == 'update'):
+        update_images()

@@ -15,3 +15,7 @@ dfad list
 ```
 dfad create
 ```
+### update images
+```
+dfad update
+```
