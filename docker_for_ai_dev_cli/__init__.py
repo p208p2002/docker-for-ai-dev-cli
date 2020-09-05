@@ -5,7 +5,7 @@ import os
 parser = argparse.ArgumentParser(add_help=False,usage='%(prog)s COMMAND')
 parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS,
                     help='show help message')
-parser.add_argument("COMMAND", help="[list|create]")
+parser.add_argument("COMMAND", help="[list|create|update]")
 
 def get_image_infos():
     r = requests.get('https://registry.hub.docker.com/v2/repositories/p208p2002/docker-for-ai-dev/tags')
