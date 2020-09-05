@@ -1,15 +1,17 @@
 # docker-for-ai-dev-cli
 - https://github.com/p208p2002/docker-for-ai-dev
 
-## install
+## Install
 ```
 pip install git+https://github.com/p208p2002/docker-for-ai-dev-cli
 ```
 
-## usage
+## Usage
+### list all avaliable on Docker Hub
 ```
 dfad list
 ```
+### create a new container
 ```
 dfad create
 ```
