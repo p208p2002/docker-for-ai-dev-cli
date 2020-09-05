@@ -17,5 +17,5 @@ setuptools.setup(
         'console_scripts': ['dfad=docker_for_ai_dev_cli:main'],
     },
     python_requires='>=3.5',
-    # install_requires = requirements
+    install_requires = ['requests']
 )
