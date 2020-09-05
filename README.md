@@ -15,7 +15,7 @@ $ dfad list
 ```bash
 $ dfad create
 ```
-### update images
+### update image
 ```bash
 $ dfad update
 ```
