@@ -2,20 +2,20 @@
 This CLI tool work with [p208p2002/docker-for-ai-dev](https://github.com/p208p2002/docker-for-ai-dev)
 
 ## Install
-```
-pip install -U git+https://github.com/p208p2002/docker-for-ai-dev-cli
+```bash
+$ pip install -U git+https://github.com/p208p2002/docker-for-ai-dev-cli
 ```
 
 ## Usage
 ### list all avaliable on Docker Hub
-```
-dfad list
+```bash
+$ dfad list
 ```
 ### create a new container
-```
-dfad create
+```bash
+$ dfad create
 ```
 ### update images
-```
-dfad update
+```bash
+$ dfad update
 ```
