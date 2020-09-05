@@ -2,6 +2,10 @@ import argparse
 import requests
 import json
 import os
+import sys 
+
+assert sys.version_info >= (3,5)
+
 parser = argparse.ArgumentParser(add_help=False,usage='%(prog)s COMMAND')
 parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS,
                     help='show help message')
