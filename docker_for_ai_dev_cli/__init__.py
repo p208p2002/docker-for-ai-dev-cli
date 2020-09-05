@@ -6,10 +6,14 @@ import sys
 
 assert sys.version_info >= (3,5)
 
-parser = argparse.ArgumentParser(add_help=False,usage='%(prog)s COMMAND')
-parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS,
-                    help='show help message')
-parser.add_argument("COMMAND", help="[list|create|update]")
+def arg_parser_error_handler(message):
+    print(message,"\n")
+    print("use --help to check avaliable command")
+    print("more info: https://github.com/p208p2002/docker-for-ai-dev-cli")
+
+parser = argparse.ArgumentParser(add_help=True,usage='%(prog)s COMMAND\nmore info: https://github.com/p208p2002/docker-for-ai-dev-cli')
+parser.add_argument("COMMAND", help="list|create|update")
+parser.error = arg_parser_error_handler
 
 def get_image_infos():
     r = requests.get('https://registry.hub.docker.com/v2/repositories/p208p2002/docker-for-ai-dev/tags')
