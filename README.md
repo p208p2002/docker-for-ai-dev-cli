@@ -7,7 +7,7 @@ $ pip install -U git+https://github.com/p208p2002/docker-for-ai-dev-cli
 ```
 
 ## Usage
-### list all avaliable images on Docker Hub
+### list all avaliable images on DockerHub
 ```bash
 $ dfad list
 ```
