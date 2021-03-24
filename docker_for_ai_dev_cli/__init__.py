@@ -3,7 +3,7 @@ import requests
 import json
 import os
 import sys 
-
+from getpass import getpass
 assert sys.version_info >= (3,5)
 
 def arg_parser_error_handler(message):
@@ -54,7 +54,7 @@ def create_container():
 
     # user account
     user_options['username'] = input('username:')
-    user_options['password'] = input('password:')
+    user_options['password'] = getpass('password:')
 
     # service
     ssh_port = input("ssh port:")
